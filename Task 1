@@ -1,0 +1,209 @@
+package task.week2;
+/*Write a program 
+    to check whether a person can cast a vote or not. 
+    The condition is you must be over 18 years old to vote. */
+
+
+public class w2T1 {
+    
+    public static void main(String[] args) {
+
+            int x=20;
+            System.out.println("Can the person vote: "+(x>18));
+    
+    }
+}
+
+package task.week2;
+        /*Write a program to calculate the total marks of four subjects of a student and the total percentage secured. And use the following conditions to generate the final result;
+        a. If equal to or more than 70 -> First Class
+        b. If more than 59 -> Upper Second Class
+        c. If more than 49 -> Second class
+        d. If more than 39 -> Third class and if below than 40 the result is fail. 
+        Hint: Use ternary operator*/
+public class w2T10 {
+    public static void main(String[] args) {
+
+                int math = 90;
+                int physics = 80;
+                int chemistry = 70;
+                int total = math + physics + chemistry;
+                String result=total > 70 ? "First Class" :
+                 total > 59 ? "Upper Second Class" : 
+                total > 49 ? "Second Class" :
+                total > 39 ? "Third Class" : "Fail";
+                System.out.println(result);
+                }
+            }
+            package task.week2;
+        /*Task2
+      * Write a program  to print simple interest from variables
+      * make 3 variable for amount,time and rate and save the calculation into variable
+      * Formula:
+      * si=amount*time*rate/100;
+      */
+public class w2T2 {
+    public static void main(String[] args) {
+
+     float amount=(float) 10000.99,time=(float) 2.4,rate=10;
+     float si=amount*time*rate/100;
+     System.out.println("Simple interest is "+si);
+ }
+}
+package task.week2;
+/*Write a program to calculate, 
+area of the triangle, and the Volume of the Cube and Cuboid.
+
+Formula: Volume of Cuboid = length*width*height;
+ and Volume of Cube: side*side*side; */
+public class w2T3 {
+    public static void main(String[] args) {
+
+      int base=10, height=20;
+      int area=(1/2)*base*height;
+    
+      System.out.println("Area of triangle is "+area);
+
+    int len=10, brd=20,hgt=30;
+    int volumeCuboid= len*brd*hgt;
+    System.out.println("Voulme of cuboid is "+volumeCuboid);
+       
+    int side=10;
+    System.out.println("The volume of cube is "+(side*side*side));
+    }
+}
+
+package task.week2;
+        /*Task4 
+         * Complete the task 1 using ternary operators
+         */
+public class w2T4 {
+    public static void main(String[] args) {
+
+        int m=10;
+        String output=m>18? "person can vote":"person cannot vote";
+        System.out.println(output);
+       
+    }
+}
+
+package task.week2;
+/** Write a program to take two integer inputs from the user and print the sum and product of them */
+public class w2T5 {
+    public static void main(String[] args) {
+      
+        int num1=10,num2=20;
+        int sum=num1+num2;
+        int product=num1*num2;
+        System.out.println("Sum of "+num1+" and "+num2+" is "+sum);
+        System.out.println("Product of "+num1+" and "+num2+" is "+product);
+
+    }
+}
+package task.week2;
+import java.util.Scanner;
+/*Write a program to take two integer inputs from the user and print the sum and product of them. */
+public class w2T6 {
+    public static void main(String[] args) {
+        Scanner scan1=new Scanner(System.in);
+
+
+        System.out.println("Enter first Integer: ");
+        int int1=scan1.nextInt();
+        System.out.println("Enter second integer: ");
+        int int2=scan1.nextInt();
+        scan1.close();
+
+        int sum= int1+int2;
+        int product= int1*int2;
+        float division= int1/int2;
+        System.out.println("sum is :"+sum);
+        System.out.println("product is: "+product);
+        System.out.println("division is: "+division);
+    }
+}
+
+package task.week2;
+import java.util.Scanner;
+/*Take the name, roll number, and field of interest from the user
+ and print in the format below
+ : Hey, my name is XYZ and my roll number is XYZ. My field of interest are xyz. */
+public class w2T7 {
+public static void main(String[] args) {
+    Scanner scan1=new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name=scan1.nextLine();
+        System.out.println("Roll NO?: ");
+        int roll= scan1.nextInt();
+        System.out.println("Field of Interest? ");
+        String interest=scan1.nextLine();
+        scan1.close();
+       
+    System.out.println("My name is "+name+" My roll number is "+roll+" My field of interest is "+interest);
+
+}
+    
+    
+}
+package task.week2;
+/*Take side of a square from user and print area and perimeter of it. 
+Also, calculate Simple Interest,
+ Area of triangle and Volume of Cube and Cuboid.
+  Take the attributes as user input.
+
+ */
+import java.util.Scanner;
+public class w2T8 {
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("Enter side of square: ");
+        int side= scan.nextInt();
+        System.out.println("Area of square is: "+(side*side));
+        System.out.println("Perimeter of square is: "+(2*side));
+        System.out.println("Input Amount: ");
+        int amount=scan.nextInt();
+        System.out.println("Input Rate: ");
+        int rate=scan.nextInt();
+        System.out.println("Input Time in years: ");
+        float time=scan.nextFloat();
+        System.out.println("Simple Interest is "+((amount*rate*time)/100));
+        System.out.println("Input base of triangle: ");
+        int base= scan.nextInt();
+        int height= scan.nextInt();
+        System.out.println("Area of triangle is: "+(0.5*(base*height)));
+        System.out.println("Enter length of cube ");
+        int length= scan.nextInt();
+        System.out.println("Volume of cube is "+(length*length*length));
+        System.out.println("Input length: ");
+        int cubLen=scan.nextInt();
+        System.out.println("input breadth: ");
+        int breadth= scan.nextInt();
+        System.out.println("Input height: ");
+        int cubHeight=scan.nextInt();
+        System.out.println("Volume of cuboid is: "+(cubLen*breadth*cubHeight));
+    scan.close();
+    
+    
+    }
+}
+
+package task.week2;
+
+import java.util.Scanner;
+
+/*Ask user to give two double input for length and breadth of a rectangle
+ and print area type casted to int. */
+public class w2T9 {
+    public static void main(String[] args) {
+        Scanner scan2=new Scanner(System.in);
+        System.out.println("Input length");
+        double length=scan2.nextDouble();
+        System.out.println("Input Breadth: ");
+        double breadth= scan2.nextDouble();
+        double area=length*breadth;
+       
+        System.out.println("The area of rectangle is: "+ ((int)area));
+
+        scan2.close();
+    }
+}
