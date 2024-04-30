@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class Week3Tasks {
+public class Task2 {
     public static void main(String[] args) {
         // Task 1: Find maximum between three numbers
         int a = 10;
         int b = 20;
         int c = 30;
-        if(a > b && a > c) {
+        if (a > b && a > c) {
             System.out.println("a is greater");
-        } else if(b > a && b > c) {
+        } else if (b > a && b > c) {
             System.out.println("b is greater");
         } else {
             System.out.println("c is greater");
@@ -26,21 +26,18 @@ public class Week3Tasks {
 
         // Task 3: Check whether a number is divisible by 5 and 11 or not
         int n = 10;
-        if(n % 5 == 0 && n % 11 == 0) {
+        if (n % 5 == 0 && n % 11 == 0) {
             System.out.println("Number is divisible by 5 and 11");
         } else {
             System.out.println("Number is not divisible by 5 and 11");
         }
 
-        // Task 4: Check whether a number is divisible by 5 and 11 or not (duplicate)
-        // Reusing the same code as Task 3
-
         // Task 5: Check whether a year is a leap year or not
         int year = 2020;
-        if(year % 4 == 0) {
-            if(year % 100 != 0) {
+        if (year % 4 == 0) {
+            if (year % 100 != 0) {
                 System.out.println("Leap Year");
-            } else if(year % 400 == 0) {
+            } else if (year % 400 == 0) {
                 System.out.println("Leap Year");
             } else {
                 System.out.println("Not a Leap Year");
@@ -51,7 +48,7 @@ public class Week3Tasks {
 
         // Task 6: Check whether an alphabet is a vowel or consonant
         char ch = 'i';
-        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ) {
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
             System.out.println(ch + " is vowel");
         } else {
             System.out.println(ch + " is consonant");
@@ -143,31 +140,26 @@ public class Week3Tasks {
         System.out.println("Enter s to calculate area of square");
         System.out.println("Enter r to calculate area of rectangle");
         System.out.print("Enter your choice: ");
-        char choice = in.next().charAt(0);
+        char choice = input.next().charAt(0);
 
-        switch(choice) {
+        switch (choice) {
             case 'c':
                 System.out.print("Enter radius of circle: ");
-                double r = in.nextDouble();
+                double r = input.nextDouble();
                 double ca = (22 / 7.0) * r * r;
                 System.out.println("Area of circle = " + ca);
                 break;
             case 's':
                 System.out.print("Enter side of square: ");
-                double side = in.nextDouble();
+                double side = input.nextDouble();
                 double sa = side * side;
                 System.out.println("Area of square = " + sa);
                 break;
             case 'r':
                 System.out.print("Enter length of rectangle: ");
-                double l = in.nextDouble();
+                double l = input.nextDouble();
                 System.out.print("Enter breadth of rectangle: ");
-                double b = in.nextDouble();
+                double b = input.nextDouble();
                 double ra = l * b;
                 System.out.println("Area of rectangle = " + ra);
                 break;
-            default:
-                System.out.println("Wrong choice!");
-        }
-    }
-}
